@@ -38,11 +38,7 @@ def show():
                     result = f"Периметр многоугольника с сторонами {sides} равен {get_perimetr(*sides)}"
 
                 case 5:  # Записать результат в файл
-                    path = input("Введите путь к файлу для записи результата: ")
-                    input_list = read_file(path)
-                    if input_list:
-                        write_file("".join(input_list))
-                        print(f"Результат записан в файл 'result.txt'")
+                    pass
 
                 case 0:  # Выход
                     print("Выход из программы.")

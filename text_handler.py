@@ -1,6 +1,6 @@
-def write_file(resutl):
+def write_file(resutl: str):
     try:
-        with open("result.txt", "w") as file:
+        with open("result.txt", "a", encoding="utf-8") as file:
             file.write(resutl + "\n")
     except Exception as e:
         print(f"Ошибка при записи в файл: {e}")
@@ -8,14 +8,13 @@ def write_file(resutl):
 
 def read_file(path):
     try:
-        with open(path.replace("//", "/"), mode="r", encoding="utf-8") as file:
+        with open(path.replace("\\", "/"), "r", encoding="utf-8") as file:
             content = file.readlines()
-            print(content)
-    except FileNotFoundError:
-        print(f"Файл по пути {path} не найден.")
-    except Exception as e:
+            content = [[float(num) for num in line.split()] for line in content]
+        return content
+    except (IOError, ValueError) as e:
         print(f"Ошибка при чтении файла: {e}")
-    return None
+        return []
 
 
 if __name__ == "__main__":

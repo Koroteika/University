@@ -5,7 +5,7 @@ def deg_to_rad(degrees: float) -> float:
     """Преобразовать градусы в радианы.
 
     Args:
-        degrees (float): Угол в градусах.
+        degrees (float): Углы в градусах.
 
     Returns:
         radians (float): Угол в радианах.

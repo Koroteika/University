@@ -1,4 +1,4 @@
-from consol_interface import console
+from .consol_interface import console
 
 
 def main():

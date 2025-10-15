@@ -1,6 +1,8 @@
-from transformations import *
-from utils import *
-from file_operations import *
+from .transformations import cartesian_to_spherical, spherical_to_cartesian
+from .utils import deg_to_rad, rad_to_deg
+from .file_operations import write_results_to_file, read_coordinates_from_file
+
+__all__ = ["console"]
 
 
 def console():
@@ -8,6 +10,7 @@ def console():
         print("Выберите функцию: ")
         print("1. Преобразование декартовых координат в сферические")
         print("2. Преобразование сферических координат в декартовые")
+        print("3. Преобразование координат из файла")
         print("0. Выход из программы")
         try:
             choice = int(input("Введите номер функции (1-2) или 0 для выхода: "))
@@ -52,3 +55,7 @@ def console():
 
         except ValueError:
             print("Некорректный ввод. Пожалуйста, введите число от 0 до 2.")
+
+
+if __name__ == "__main__":
+    console()

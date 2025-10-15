@@ -1,5 +1,5 @@
 from math import sqrt, atan2, sin, cos
-from .utils import *
+from .utils import rad_to_deg, deg_to_rad
 
 
 def cartesian_to_spherical(x: float, y: float, z: float) -> tuple[float, float, float]:
@@ -24,7 +24,9 @@ def cartesian_to_spherical(x: float, y: float, z: float) -> tuple[float, float, 
     return r, teta, fi
 
 
-def spherical_to_cartesian(r: float, teta: float, fi: float) -> float:
+def spherical_to_cartesian(
+    r: float, teta: float, fi: float
+) -> tuple[float, float, float]:
     """Преобразование сферических координат в декартовые
 
     Args:
@@ -40,7 +42,6 @@ def spherical_to_cartesian(r: float, teta: float, fi: float) -> float:
     # Переводим все в радианы
     teta = deg_to_rad(teta)
     fi = deg_to_rad(fi)
-    r = deg_to_rad(r)
 
     x = r * sin(fi) * cos(teta)
     y = r * sin(fi) * sin(teta)

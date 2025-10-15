@@ -26,8 +26,8 @@ def rad_to_deg(radians: float) -> float:
     return radians * (180 / pi)
 
 
-if __name__ == "__main__":
-    a = deg_to_rad(45)
-    b = rad_to_deg(0.7853981633974483)
-    print(a)
-    print(b)
+# if __name__ == "__main__":
+#     a = deg_to_rad(45)
+#     b = rad_to_deg(0.7853981633974483)
+#     print(a)
+#     print(b)

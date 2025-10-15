@@ -2,7 +2,7 @@ from math import sqrt, atan2, sin, cos
 from .utils import *
 
 
-def cartesian_to_spherical(x: float, y: float, z: float) -> float:
+def cartesian_to_spherical(x: float, y: float, z: float) -> tuple[float, float, float]:
     """Преобразование декартовых координат в сферические
 
     Args:

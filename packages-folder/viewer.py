@@ -19,7 +19,7 @@ def show():
                 case 1:  # Площадь квадрата
                     side = float(input("Введите длину стороны квадрата: "))
                     result = (
-                        f"Площадь квадрата со стороной {side} равна {get_qguare(side)}"
+                        f"Площадь квадрата со стороной {side} равна {get_square(side)}"
                     )
                     print(result)
                     write_file(result)

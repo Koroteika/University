@@ -3,6 +3,8 @@ def get_perimetr(*args):
     return sum(args)
 
 
+__all__ = ["get_perimetr"]
+
 if __name__ == "__main__":
     print(get_perimetr(10, 20, 30))  # 60
     print(get_perimetr(5, 5, 5, 5))  # 20

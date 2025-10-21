@@ -8,5 +8,5 @@ __all__ = [
     "write_results_to_file",
     "read_coordinates_from_file",
     "rad_to_deg",
-    "deg_to_deg",
+    "deg_to_rad",
 ]

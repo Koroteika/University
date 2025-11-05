@@ -1,33 +1,29 @@
 from math import pi
 
 
-def deg_to_rad(degrees: float) -> float:
-    """Преобразовать градусы в радианы.
+class AngleConverter:
+    """Класс для преобразования углов между градусами и радианами."""
 
-    Args:
-        degrees (float): Углы в градусах.
+    @staticmethod
+    def deg_to_rad(degrees: float) -> float:
+        """Преобразовать градусы в радианы.
 
-    Returns:
-        radians (float): Угол в радианах.
-    """
-    return degrees * (pi / 180)
+        Args:
+            degrees (float): Углы в градусах.
 
+        Returns:
+            float: Угол в радианах.
+        """
+        return degrees * (pi / 180)
 
-def rad_to_deg(radians: float) -> float:
-    """Преобразовать радианы в градусы.
+    @staticmethod
+    def rad_to_deg(radians: float) -> float:
+        """Преобразовать радианы в градусы.
 
-    Args:
-        radians (float): Угол в радианах.
+        Args:
+            radians (float): Угол в радианах.
 
-    Returns:
-        degrees (float): Угол в градусах.
-    """
-
-    return radians * (180 / pi)
-
-
-# if __name__ == "__main__":
-#     a = deg_to_rad(45)
-#     b = rad_to_deg(0.7853981633974483)
-#     print(a)
-#     print(b)
+        Returns:
+            float: Угол в градусах.
+        """
+        return radians * (180 / pi)
